@@ -1,7 +1,10 @@
 var currentUserID = 0;
 
-$(document).ready(function(){
-  currentUserID = JSON.parse($('#HIDE').text());
+$(document).ready(function(){ 
+  var currentUserExists = $('#HIDE').text();
+  // console.log(currentUserExists === '\n  ');
+  // console.log(currentUserExists.split(""))
+  if ( currentUserExists !== "" ){ currentUserID = JSON.parse(currentUserExists) };
   
   $('.button').on('click', function(e){
     if (e.currentTarget.id === "signout"){

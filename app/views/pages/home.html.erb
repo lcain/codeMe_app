@@ -4,12 +4,6 @@
   <div id="staticLink">
     HTML
   </div>
-  
-  <div id="HIDE">
-    <% if current_user %>
-      <%=  "#{current_user.id}" %>
-    <% end %>
-  </div>
  
 
   <textarea id="txt" class="inv">
@@ -40,7 +34,7 @@
 </div>
 
 
-<div class="button nav bottom login" id="savesies">SAVE!</div>
+<div class="button nav bottom save" id="savesies">SAVE!</div>
 
 
 <!-- <div class="button">Grab me some JSON!</div> -->
@@ -56,3 +50,4 @@
 
 <div class="style"></div>
 
+<div id="HIDE"><% if current_user %><%= "#{current_user.id}" %><% end %></div>
