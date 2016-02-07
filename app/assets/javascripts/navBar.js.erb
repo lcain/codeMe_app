@@ -1,4 +1,7 @@
+var currentUserID = 0;
+
 $(document).ready(function(){
+  currentUserID = JSON.parse($('#HIDE').text());
   
   $('.button').on('click', function(e){
     if (e.currentTarget.id === "signout"){
@@ -30,7 +33,7 @@ $(document).ready(function(){
       }  
     
       $.ajax(req).done(function(data){
-        console.log(data)
+        currentUserID = data.id;
         var ret = '';
         $('.login').html(
           '<li class="nav button" id="signout">Log out '+ data.email +'</li>'
@@ -83,7 +86,7 @@ $(document).ready(function(){
         }
       }
       $.ajax(req).done(function(data){
-        console.log(data)
+        currentUserID = data.id;
         var ret = '';
         $('.login').html(
           '<li class="nav button" id="signout">Log out '+ data.email +'</li>'
@@ -102,6 +105,31 @@ $(document).ready(function(){
         });
       })
 
+    } else if (e.currentTarget.id === "savesies") {
+      var updatedText = $('#txt').val();
+
+      $.ajax({
+        url: 'finderz',
+        method: 'PUT',
+        dataType: 'json',
+        data: {
+          butts: currentUserID
+        }
+      }).done(function(data){
+        $.ajax({
+          url: 'hypertexts/' + data.id,
+          method: 'PUT',
+          dataType: 'json',
+          data: {
+            hypertext: {
+              content: updatedText,
+              id: data.id
+            }
+          }
+        }).done(function() {
+          console.log('success!!!!!!!!!!');
+        });
+      });
     }
   
   });

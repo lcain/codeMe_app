@@ -98,3 +98,12 @@ a:link {
   display: inline-block;
 }
 
+.bottom {
+  top: 500px;
+  left: 500px;
+  position: fixed;
+}
+
+#HIDE {
+  visibility: hidden;
+}
