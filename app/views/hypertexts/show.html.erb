@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @hypertext.user_id %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @hypertext.content %>
+</p>
+
+<%= link_to 'Edit', edit_hypertext_path(@hypertext) %> |
+<%= link_to 'Back', hypertexts_path %>

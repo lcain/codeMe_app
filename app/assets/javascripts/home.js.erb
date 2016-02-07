@@ -1,0 +1,96 @@
+$(document).ready(function(){
+
+  // $('.button').on('click', function(){
+    
+  //   $.ajax('/hypertexts/3.json').done(function(data){
+  //     console.log(data);
+  //     $('#userPage').append($(data.content))
+  //   })
+
+  // });
+
+
+  //This is the editable HTML text box.
+  $('#staticLink').on('click', function(){
+
+      $('#hypertextDropdown.notDropped').toggleClass( "dropped" )
+      
+      $('#txt').toggleClass( "inv" );
+
+  });
+
+  $('#txt').keyup(function(){
+
+    $('#userPage').html($(this).val());
+
+  })//.trigger("keyup"); //This makes what's in the editable HTML text box render on the page automatically
+
+  // This is to allow tabbing in the text box.
+  $(document).delegate('#txt', 'keydown', function(e) {
+    var keyCode = e.keyCode || e.which;
+
+    if (keyCode == 9) {
+      e.preventDefault();
+      var start = $(this).get(0).selectionStart;
+      var end = $(this).get(0).selectionEnd;
+
+      // set textarea value to: text before caret + tab + text after caret
+      $(this).val($(this).val().substring(0, start)
+                  + "\t"
+                  + $(this).val().substring(end));
+
+      // put caret at right position again
+      $(this).get(0).selectionStart =
+      $(this).get(0).selectionEnd = start + 1;
+    }
+
+  });
+
+
+  // Let's add some blinking to 'Hello World' at the begining.
+  $('#hello').append('<span id="less">></span>')
+  $('#hello').append('<span class="blink">|</span>')
+
+  
+
+
+  var hello = "...Hello World!"
+  var split = hello.split("");
+
+
+var runText = function(){
+  var writeMe = function(num){
+
+    setTimeout(function(){ 
+      // console.log(split, i)
+      $('.blink').append('<span>' + split[num] + '</span>')
+    }, 100 * num); 
+  }
+
+  for (var i = 0; i < split.length; i++) {
+    writeMe(i)
+    
+  };
+}
+
+setTimeout(function(){
+  runText()
+},2500)
+
+});
+
+
+
+
+    // $.ajax('/styles/3.json').done(function(data){
+    //   console.log(data);
+
+    //   var json = CSSJSON.toJSON(data.content);
+    //   var css = CSSJSON.toCSS(json);
+
+    //   // console.log(css)
+    //   $('.style').append('<style>' + css + '</style>')
+    //   $('.style').append( css )
+
+    //   // $('body').css(css)
+    // })

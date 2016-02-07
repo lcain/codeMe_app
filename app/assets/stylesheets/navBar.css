@@ -1,0 +1,100 @@
+.login {
+  position: fixed;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  display: inline-block;
+}
+
+#hypertextDropdown {
+  border: 2px solid white;
+  z-index: 2;
+  margin-top: 0px;
+  position: fixed;
+  display: inline-block;
+  vertical-align: top;
+  right: 0px;
+}
+
+#staticLink {
+  z-index: 2;
+  color: white;
+  text-align: right;
+  margin-right: 6px;
+}
+
+
+.notDropped {
+  text-align: center;
+  width: 50px;
+  margin-top: 10px;
+  margin-left: 95%;
+  z-index: 2;
+}
+
+.dropped {
+  width: 50%;
+  margin-left: 49.5%;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  z-index: 2;
+}
+
+#editBox {
+  width: 100%;
+  min-height: 100%;
+  border: 2px solid red;
+  z-index: 2;
+}
+
+#userPage {
+  /*border: 1px solid green;*/
+  width: 100%;
+  min-height: 100%;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index:-1; /* Background! */
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+}
+
+body {
+  height: 100%;
+  background-color:#1C1C00;
+}
+
+#txt {
+  width: 99%;
+  height: 96.5%;
+  resize: none;
+  background-color: rgba(255, 255, 255, .5);
+  font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.inv {
+  display: none;
+}
+
+h1 {
+  margin:0;
+}
+
+a:link {
+  color:white;
+  text-decoration: none;
+}
+
+.nav {
+  display: inline-block;
+}
+

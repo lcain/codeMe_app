@@ -1,0 +1,74 @@
+#hello{
+      margin-top: 100px;
+      color: rgb(9, 188, 1);
+      font-family: "Lucida Console", Monaco, monospace;
+      font-size: large; 
+      display: block;
+    }
+
+.hidden {
+  display: none;
+}
+
+
+@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.css3-blink {
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s; 
+}
+
+.blink {
+  animation: blink 0.8s steps(5, start) 3;
+  -webkit-animation: blink 0.8s steps(5, start) 3;
+}
+
+@keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+/*//*/
+
+
+/*@-webkit-keyframes blinker {  
+  from { opacity: 1.0; }
+  to { opacity: 0.0; }
+}
+
+.css3-blink2 {
+  -webkit-animation-name: blinker;  
+  -webkit-animation-iteration-count: infinite;  
+  -webkit-animation-timing-function: cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration: 1s; 
+}
+
+.blink2 {
+  animation: blink 2s steps(5, start) 1;
+  -webkit-animation: blink 2s steps(5, start) 1;
+}
+
+@keyframes blink2 {
+  to {
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes blink2 {
+  to {
+    visibility: hidden;
+  }
+}
+*/
