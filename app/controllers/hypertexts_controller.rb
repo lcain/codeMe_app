@@ -72,6 +72,10 @@ class HypertextsController < ApplicationController
     end
   end
 
+  def find_by
+    return render json: Hypertext.find_by({user_id: params[:butts]})
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_hypertext

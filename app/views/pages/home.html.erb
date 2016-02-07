@@ -7,6 +7,12 @@
  
 
   <textarea id="txt" class="inv">
+    <% if current_user %>
+      <%=  "#{current_user.hypertexts[0].content}" %>
+    <% else %>
+
+
+
     <style>
       body {
         background-color:#1C1C00;
@@ -22,6 +28,7 @@
     </style>
 
     <p>> ...Hello World!</p>
+    <% end %>
   </textarea>
 
 </div>
@@ -37,7 +44,9 @@
   </div>
 </div>
 
-<div class="hypertext"></div>
+<div class="hypertext">
+
+</div>
 
 <div class="style"></div>
 

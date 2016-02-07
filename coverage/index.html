@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-01-24T16:28:08+11:00">2016-01-24T16:28:08+11:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-02-07T16:23:46+11:00">2016-02-07T16:23:46+11:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">80.55%</span></span>
+    (<span class="covered_percent"><span class="yellow">80.86%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.85
+         0.87
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>51</b> files in total.
-    <b>473</b> relevant lines. 
-    <span class="green"><b>381</b> lines covered</span> and
-    <span class="red"><b>92</b> lines missed </span>
+    <b>486</b> relevant lines. 
+    <span class="green"><b>393</b> lines covered</span> and
+    <span class="red"><b>93</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -92,12 +92,12 @@
       
       <tr>
         <td class="strong"><a href="#5215e4679c15c7ea2e518a757096c9de595ebf4c" class="src_link" title="app/helpers/application_helper.rb">app/helpers/application_helper.rb</a></td>
-        <td class="green strong">100.0 %</td>
-        <td>2</td>
+        <td class="green strong">91.67 %</td>
+        <td>24</td>
+        <td>12</td>
+        <td>11</td>
         <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -233,9 +233,9 @@
       <tr>
         <td class="strong"><a href="#c7d9e6865f95853cb3edfa46dabfba5a995f4333" class="src_link" title="config/initializers/devise.rb">config/initializers/devise.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>265</td>
-        <td>12</td>
-        <td>12</td>
+        <td>267</td>
+        <td>14</td>
+        <td>14</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -293,7 +293,7 @@
       <tr>
         <td class="strong"><a href="#e62b75be06199a0d27e76684961b794c0ed13eff" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>21</td>
+        <td>50</td>
         <td>5</td>
         <td>5</td>
         <td>0</td>
@@ -1725,11 +1725,11 @@
         <div class="source_table" id="5215e4679c15c7ea2e518a757096c9de595ebf4c">
   <div class="header">
     <h3>app/helpers/application_helper.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="green">91.67 %</span> covered</h4>
     <div>
-      <b>1</b> relevant lines. 
-      <span class="green"><b>1</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>12</b> relevant lines. 
+      <span class="green"><b>11</b> lines covered</span> and
+      <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
   
@@ -1743,6 +1743,138 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def funkynav</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="6">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    nav = &#39;&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="8">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    nav += &#39;&lt;div class=&quot;login&quot;&gt;&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="9">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    if user_signed_in?</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">      nav += &#39;&lt;li class=&quot;nav button&quot; id=&quot;signout&quot;&gt;&#39; + &quot;Log out #{ current_user.email }&quot; + &#39;&lt;/li&gt;&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="11">
+          
+          
+          <code class="ruby">    else</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="12">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      nav += &#39;&lt;nav class=&quot;nav&quot;&gt;Email:&lt;/nav&gt;&#39; + &#39;&lt;input type=&quot;text&quot; id=&quot;email&quot; class=&quot;nav&quot;&gt;&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="13">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      nav += &#39;&lt;nav class=&quot;nav&quot;&gt;Password:&lt;/nav&gt;&#39; + &#39;&lt;input type=&quot;password&quot; id=&quot;password&quot; class=&quot;nav&quot;&gt;&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="14">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      nav += &#39;&lt;li class=&quot;nav button&quot; id=&quot;signin&quot;&gt;&#39; + &quot;Sign in&quot; + &#39;&lt;/li&gt;&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="15">
+          <span class="hits">2</span>
+          
+          <code class="ruby">      nav += &#39;&lt;li class=&quot;nav button&quot; id=&quot;signup&quot;&gt;&#39; + &quot;Sign up&quot; + &#39;&lt;/li&gt;&#39; </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="17">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    nav += &#39;&lt;/div&gt;&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="19">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    nav</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="20">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby">end</code>
@@ -3137,8 +3269,8 @@
     <h3>config/initializers/devise.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>12</b> lines covered</span> and
+      <b>14</b> relevant lines. 
+      <span class="green"><b>14</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4730,7 +4862,19 @@
           <code class="ruby">  # config.omniauth_path_prefix = &#39;/my_engine/users/auth&#39;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="265">
+        <li class="covered" data-hits="1" data-linenumber="265">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.http_authenticatable_on_xhr = false</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="266">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  config.navigational_formats = [&quot;​*/*​&quot;, :html, :json]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="267">
           
           
           <code class="ruby">end</code>
@@ -5105,112 +5249,286 @@
         <li class="never" data-hits="" data-linenumber="3">
           
           
-          <code class="ruby">#         Prefix Verb   URI Pattern                    Controller#Action</code>
+          <code class="ruby">#                   Prefix Verb   URI Pattern                    Controller#Action</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="4">
           
           
-          <code class="ruby">#     hypertexts GET    /hypertexts(.:format)          hypertexts#index</code>
+          <code class="ruby">#         new_user_session GET    /users/sign_in(.:format)       users/sessions#new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="5">
           
           
-          <code class="ruby">#                POST   /hypertexts(.:format)          hypertexts#create</code>
+          <code class="ruby">#             user_session POST   /users/sign_in(.:format)       users/sessions#create</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="6">
           
           
-          <code class="ruby">#  new_hypertext GET    /hypertexts/new(.:format)      hypertexts#new</code>
+          <code class="ruby">#     destroy_user_session DELETE /users/sign_out(.:format)      users/sessions#destroy</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby"># edit_hypertext GET    /hypertexts/:id/edit(.:format) hypertexts#edit</code>
+          <code class="ruby">#            user_password POST   /users/password(.:format)      devise/passwords#create</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="8">
           
           
-          <code class="ruby">#      hypertext GET    /hypertexts/:id(.:format)      hypertexts#show</code>
+          <code class="ruby">#        new_user_password GET    /users/password/new(.:format)  devise/passwords#new</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="9">
           
           
-          <code class="ruby">#                PATCH  /hypertexts/:id(.:format)      hypertexts#update</code>
+          <code class="ruby">#       edit_user_password GET    /users/password/edit(.:format) devise/passwords#edit</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
           
           
-          <code class="ruby">#                PUT    /hypertexts/:id(.:format)      hypertexts#update</code>
+          <code class="ruby">#                          PATCH  /users/password(.:format)      devise/passwords#update</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">#                DELETE /hypertexts/:id(.:format)      hypertexts#destroy</code>
+          <code class="ruby">#                          PUT    /users/password(.:format)      devise/passwords#update</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
           
           
-          <code class="ruby">#</code>
+          <code class="ruby"># cancel_user_registration GET    /users/cancel(.:format)        users/registrations#cancel</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="13">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#        user_registration POST   /users(.:format)               users/registrations#create</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="14">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="14">
           
-          <code class="ruby">Rails.application.routes.draw do</code>
+          
+          <code class="ruby">#    new_user_registration GET    /users/sign_up(.:format)       users/registrations#new</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  devise_for :users</code>
+          
+          <code class="ruby">#   edit_user_registration GET    /users/edit(.:format)          users/registrations#edit</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="16">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="16">
           
-          <code class="ruby">  resources :styles</code>
+          
+          <code class="ruby">#                          PATCH  /users(.:format)               users/registrations#update</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="17">
           
-          <code class="ruby">  root to: &quot;pages#home&quot;</code>
+          
+          <code class="ruby">#                          PUT    /users(.:format)               users/registrations#update</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="18">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#                          DELETE /users(.:format)               users/registrations#destroy</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="19">
           
-          <code class="ruby">  resources :hypertexts</code>
+          
+          <code class="ruby">#                   styles GET    /styles(.:format)              styles#index</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="20">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">#                          POST   /styles(.:format)              styles#create</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">#                new_style GET    /styles/new(.:format)          styles#new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">#               edit_style GET    /styles/:id/edit(.:format)     styles#edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby">#                    style GET    /styles/:id(.:format)          styles#show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">#                          PATCH  /styles/:id(.:format)          styles#update</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby">#                          PUT    /styles/:id(.:format)          styles#update</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby">#                          DELETE /styles/:id(.:format)          styles#destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby">#                     root GET    /                              pages#home</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby">#               hypertexts GET    /hypertexts(.:format)          hypertexts#index</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">#                          POST   /hypertexts(.:format)          hypertexts#create</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">#            new_hypertext GET    /hypertexts/new(.:format)      hypertexts#new</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="31">
+          
+          
+          <code class="ruby">#           edit_hypertext GET    /hypertexts/:id/edit(.:format) hypertexts#edit</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">#                hypertext GET    /hypertexts/:id(.:format)      hypertexts#show</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby">#                          PATCH  /hypertexts/:id(.:format)      hypertexts#update</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
+          
+          
+          <code class="ruby">#                          PUT    /hypertexts/:id(.:format)      hypertexts#update</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="35">
+          
+          
+          <code class="ruby">#                          DELETE /hypertexts/:id(.:format)      hypertexts#destroy</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="36">
+          
+          
+          <code class="ruby">#</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="37">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="38">
+          <span class="hits">1</span>
+          
+          <code class="ruby">Rails.application.routes.draw do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="39">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  devise_for :users, controllers: {</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">    sessions: &#39;users/sessions&#39;,</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="41">
+          
+          
+          <code class="ruby">    registrations: &#39;users/registrations&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="42">
+          
+          
+          <code class="ruby">  }</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  resources :styles</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  root to: &quot;pages#home&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">  # get &#39;/users/sign_out&#39;, to: &#39;devise/sessions#destroy&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  resources :hypertexts</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="49">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">end</code>

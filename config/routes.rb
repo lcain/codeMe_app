@@ -33,6 +33,7 @@
 #                          PATCH  /hypertexts/:id(.:format)      hypertexts#update
 #                          PUT    /hypertexts/:id(.:format)      hypertexts#update
 #                          DELETE /hypertexts/:id(.:format)      hypertexts#destroy
+#       hypertexts_find_by GET    /hypertexts/find_by(.:format)  hypertexts#find_by
 #
 
 Rails.application.routes.draw do
@@ -46,5 +47,6 @@ Rails.application.routes.draw do
   # get '/users/sign_out', to: 'devise/sessions#destroy'
 
   resources :hypertexts
+  put 'finderz' => 'hypertexts#find_by'
 
 end

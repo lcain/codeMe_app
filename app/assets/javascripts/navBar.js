@@ -36,6 +36,17 @@ $(document).ready(function(){
           '<li class="nav button" id="signout">Log out '+ data.email +'</li>'
         );
 
+        $.ajax({
+          url: 'finderz',
+          method: 'PUT',
+          dataType: 'json',
+          data: {
+            butts: data.id
+          }
+        }).done(function(data){
+          $('#txt').val(data.content);
+        });
+
         $('.button').on('click', function(e){
           console.log('clicked')
           if (e.currentTarget.id === "signout"){
