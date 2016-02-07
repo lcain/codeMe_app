@@ -9,8 +9,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     user.password_confirmation = params[:user][:password_confirmation]
     user.save!
 
-    hypertext = Hypertext.new
-    
+    hypertext = Hypertext.create :content => params[:user][:hypertext]
+    user.hypertexts << hypertext
+
 
 
     if user.valid_password?(params[:user][:password])

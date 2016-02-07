@@ -49,10 +49,11 @@ $(document).ready(function(){
         });
       })
 
-    } else if (e.currentTarget.id === "singles"){
+    } else if (e.currentTarget.id === "signup"){
       console.log('YOU CLICKED ME')
       var email = $('#email').val();
       var password = $('#password').val();
+      var hypertext = $('#txt').val();
       var req = {
         headers: {
           'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content')
@@ -65,7 +66,8 @@ $(document).ready(function(){
             "email": email,
             "password": password,
             "password_confirmation": password,
-            "remember_me": 1
+            "remember_me": 1,
+            "hypertext": hypertext
           }
         }
       }
