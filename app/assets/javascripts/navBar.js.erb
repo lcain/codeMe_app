@@ -43,18 +43,22 @@ $(document).ready(function(){
         );
 
         $.ajax({
-          url: 'finderz',
+          url: 'finderID',
           method: 'PUT',
           dataType: 'json',
           data: {
-            butts: data.id
+            individual: data.id
           }
         }).done(function(data){
           $('#txt').val(data.content);
+          console.log(data.id);
+          $('#userPage').html($('#txt').val());
+          // history.pushState( {}, '', '/hypertexts/' + data.id );
+
         });
 
         $('.button').on('click', function(e){
-          console.log('clicked')
+          // console.log('clicked')
           if (e.currentTarget.id === "signout"){
             $.ajax({
               url: '/users/sign_out',
@@ -67,7 +71,7 @@ $(document).ready(function(){
       })
 
     } else if (e.currentTarget.id === "signup"){
-      console.log('YOU CLICKED ME')
+      // console.log('YOU CLICKED ME')
       var email = $('#email').val();
       var password = $('#password').val();
       var hypertext = $('#txt').val();
@@ -96,7 +100,7 @@ $(document).ready(function(){
         );
 
         $('.button').on('click', function(e){
-          console.log('clicked')
+          // console.log('clicked')
           if (e.currentTarget.id === "signout"){
             $.ajax({
               url: '/users/sign_out',
@@ -109,16 +113,17 @@ $(document).ready(function(){
       })
 
     } else if (e.currentTarget.id === "savesies") {
-      var updatedText = $('#txt').val();
+      var updatedText = sanitizeText( $('#txt').val() );
 
       $.ajax({
-        url: 'finderz',
+        url: 'finderID',
         method: 'PUT',
         dataType: 'json',
         data: {
-          butts: currentUserID
+          individual: currentUserID
         }
       }).done(function(data){
+        console.log(data)
         $.ajax({
           url: 'hypertexts/' + data.id,
           method: 'PUT',

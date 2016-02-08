@@ -73,7 +73,7 @@ class HypertextsController < ApplicationController
   end
 
   def find_by
-    return render json: Hypertext.find_by({user_id: params[:butts]})
+    return render json: Hypertext.find_by({user_id: params[:individual]})
   end
 
   private

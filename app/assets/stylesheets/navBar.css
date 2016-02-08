@@ -1,9 +1,22 @@
-.login, .save {
+.login {
   position: fixed;
   border: 2px solid white;
   color: white;
   text-align: center;
   display: inline-block;
+  top: 0;
+}
+
+.save {
+  position: fixed;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  right: 0px;
+  bottom: 0px;
+  z-index: 100;
+  padding: 5px;
 }
 
 #hypertextDropdown {
@@ -27,7 +40,8 @@
 .notDropped {
   text-align: center;
   width: 50px;
-  margin-top: 10px;
+  top: 0;
+  right: 0;
   margin-left: 95%;
   z-index: 2;
 }

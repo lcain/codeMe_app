@@ -1,3 +1,13 @@
+var sanitizeText = function (text) {
+  var re = new RegExp("<.*script.*>(.*<\s*\/\s*script\s*>)?", "g");
+  var currentContent = $("#txt").val();
+
+  var newContent = currentContent.replace( re, "" );
+  $("#txt").val(newContent);
+
+  return newContent;
+};
+
 $(document).ready(function(){
 
   // $('.button').on('click', function(){
@@ -21,7 +31,7 @@ $(document).ready(function(){
 
   $('#txt').keyup(function(){
 
-    $('#userPage').html($(this).val());
+    $('#userPage').html(   sanitizeText($(this).val())    );
 
   })//.trigger("keyup"); //This makes what's in the editable HTML text box render on the page automatically
 
@@ -49,34 +59,43 @@ $(document).ready(function(){
 
   // Let's add some blinking to 'Hello World' at the begining.
   $('#hello').append('<span id="less">></span>')
-  $('#hello').append('<span class="blink">|</span>')
+  $('#hello').append('<span class="blink">.</span>')
 
-  
-
-
-  var hello = "...Hello World!"
+  var hello = "..Hello World!"
   var split = hello.split("");
 
 
-var runText = function(){
-  var writeMe = function(num){
+  var runText = function(){
+    var writeMe = function(num){
 
-    setTimeout(function(){ 
-      // console.log(split, i)
-      $('.blink').append('<span>' + split[num] + '</span>')
-    }, 100 * num); 
+      setTimeout(function(){ 
+        // console.log(split, i)
+        $('.blink').append('<span>' + split[num] + '</span>')
+      }, 100 * num); 
+    }
+
+    for (var i = 0; i < split.length; i++) {
+      writeMe(i)
+      
+    };
   }
 
-  for (var i = 0; i < split.length; i++) {
-    writeMe(i)
-    
-  };
-}
+  setTimeout(function(){
+    runText()
+  },2500)
 
-setTimeout(function(){
-  runText()
-},2500)
+  //Tutorial Step 1:
 
+
+
+
+
+
+
+
+
+
+// End of Document Ready
 });
 
 

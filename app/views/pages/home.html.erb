@@ -10,31 +10,13 @@
     <% if current_user %>
       <%=  "#{current_user.hypertexts[0].content}" %>
     <% else %>
-
-
-
-    <style>
-      body {
-        background-color:#1C1C00;
-      }
-
-      p{
-        margin-top: 100px;
-        color: rgb(9, 188, 1);
-        font-family: "Lucida Console", Monaco, monospace;
-        font-size: large; 
-      }
-
-    </style>
-
-    <p>> ...Hello World!</p>
     <% end %>
   </textarea>
 
 </div>
 
 
-<div class="button nav bottom save" id="savesies">SAVE!</div>
+<div class="button nav save" id="savesies">SAVE!</div>
 
 
 <!-- <div class="button">Grab me some JSON!</div> -->
@@ -51,3 +33,4 @@
 <div class="style"></div>
 
 <div id="HIDE"><% if current_user %><%= "#{current_user.id}" %><% end %></div>
+<div id="arrows"></div>

@@ -20,5 +20,24 @@ module ApplicationHelper
 
   end
 
+  # def hypertext
+  #   nav = ''
+  #   nav += '<div id="hypertextDropdown" class="notDropped">'
+  #   nav += '<div id="staticLink">HTML</div>'
+    
+  #   if user_signed_in? == nil
+     
+
+     
+
+  #     nav += '<textarea id="txt" class="inv">' + "#{current_user.hypertexts[0].content}" + '</textarea>'
+
+    
+  #   end
+  #     nav += '</div>'
+  #   nav
+
+  # end
+
 
 end

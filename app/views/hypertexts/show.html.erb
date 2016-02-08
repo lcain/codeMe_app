@@ -1,14 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%== @hypertext.content %>
 
-<p>
-  <strong>User:</strong>
-  <%= @hypertext.user_id %>
-</p>
 
-<p>
-  <strong>Content:</strong>
-  <%= @hypertext.content %>
-</p>
+<div id="hypertextDropdown" class="notDropped">
+  
+  <div id="staticLink">
+    HTML
+  </div>
+ 
+  <% if @hypertext.user == current_user %>
+    <textarea id="txt" class="inv">
+      <%= @hypertext.content %>
+    </textarea>
+  <% else %>
+    <textarea id="txt" class="inv">
+      <%= @hypertext.content %>
+    </textarea>
+  <% end %>
 
-<%= link_to 'Edit', edit_hypertext_path(@hypertext) %> |
-<%= link_to 'Back', hypertexts_path %>
+</div>
+
+<% if @hypertext.user == current_user %>
+  <div class="button nav save" id="savesies">SAVE!</div>
+<% end %>
+
+
+<!-- <div class="button">Grab me some JSON!</div> -->
+<div id="userPage">
+  <div id="hello">
+
+  </div>
+</div>
+
+<div class="hypertext">
+
+</div>
+
+<div class="style"></div>
+
+<div id="HIDE"><% if current_user %><%= "#{current_user.id}" %><% end %></div>
+<div id="arrows"></div>
