@@ -5,6 +5,7 @@
   text-align: center;
   display: inline-block;
   top: 0;
+  font-family: "Lucida Console", Monaco, monospace;
 }
 
 .save {
@@ -13,10 +14,12 @@
   color: white;
   text-align: center;
   display: inline-block;
-  right: 0px;
+  right: 3px;
   bottom: 0px;
   z-index: 100;
   padding: 5px;
+  font-family: "Lucida Console", Monaco, monospace;
+
 }
 
 #hypertextDropdown {
@@ -34,6 +37,8 @@
   color: white;
   text-align: right;
   margin-right: 6px;
+  font-family: "Lucida Console", Monaco, monospace;
+  
 }
 
 
@@ -91,7 +96,7 @@ body {
   height: 96.5%;
   resize: none;
   background-color: rgba(255, 255, 255, .5);
-  font-family: Tahoma, Geneva, sans-serif;
+  font-family: "Lucida Console", Monaco, monospace;
 
 }
 
@@ -110,6 +115,8 @@ a:link {
 
 .nav {
   display: inline-block;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .bottom {
@@ -121,3 +128,16 @@ a:link {
 #HIDE {
   visibility: hidden;
 }
+
+input {
+  vertical-align: top;
+  font-size:11px;
+  font-family: "Lucida Console", Monaco, monospace;
+
+}
+
+#signin {
+  border-right: 2px solid white;
+}
+
+

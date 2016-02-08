@@ -57,63 +57,27 @@ $(document).ready(function(){
 
 
 
-// Automated tutorial starts here:
-  // window.current_user = window.current_user || undefined;
+  // Automated tutorial starts here:
+  // Check to see if the user is logged in. If logged in, no tutorial, if not logged in start the tutorial.
   var checkIfLoggedIn = function () {
     if (window.current_user) {
-      console.log("User logged in");
+      // console.log("User logged in");
     } else {
-      console.log("No user");
+      // console.log("No user");
 
-      // Let's add some blinking to 'Hello World' at the begining.
-      $('#hello').append('<span id="less">></span>')
-      $('#hello').append('<span class="blink">.</span>')
-
-      var hello = "..Hello World!"
-      var split = hello.split("");
-
-      var runText = function(){
-        var writeMe = function(num){
-
-          setTimeout(function(){ 
-            // console.log(split, i)
-            $('.blink').append('<span>' + split[num] + '</span>')
-          }, 100 * num); 
-        }
-
-        for (var i = 0; i < split.length; i++) {
-          writeMe(i)
-          
-        };
-      }
-
-      setTimeout(function(){
-        runText()
-      },2500)
-
-
-      //Tutorial Step 1:
-      //Arrow
-
-
-
-
+      tutorial();
     }
   };
 
+  // Check to see if the user is on the homepage.
+  // Only start tutorial if the user is on the homepage.
+  var homePage = function(){
+    if(location.pathname === '/'){
+      checkIfLoggedIn();
+    }
+  };
 
-
-
-
-  //Tutorial Step 1:
-
-
-
-
-
-
-  checkIfLoggedIn();
-
+  homePage();
 
 
 // End of Document Ready
