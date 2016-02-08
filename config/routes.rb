@@ -48,5 +48,6 @@ Rails.application.routes.draw do
 
   resources :hypertexts
   put 'finderID' => 'hypertexts#find_by'
+  
 
 end

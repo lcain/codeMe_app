@@ -3,10 +3,15 @@
 <head>
   <title>CodeMeApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if current_user %>
+    <script>
+      window.current_user = <%= raw current_user.to_json %>;
+    </script>
+  <% end %>
 
   <%== funkynav %>
 

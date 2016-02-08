@@ -4,7 +4,9 @@ $(document).ready(function(){
   var currentUserExists = $('#HIDE').text();
   // console.log(currentUserExists === '\n  ');
   // console.log(currentUserExists.split(""))
-  if ( currentUserExists !== "" ){ currentUserID = JSON.parse(currentUserExists) };
+  if ( currentUserExists !== "" ){ 
+    currentUserID = JSON.parse(currentUserExists) 
+  };
   
   $('.button').on('click', function(e){
     if (e.currentTarget.id === "signout"){
@@ -36,7 +38,11 @@ $(document).ready(function(){
       }  
     
       $.ajax(req).done(function(data){
+        window.current_user = data;
         currentUserID = data.id;
+
+        $(".save").removeClass("hidden");
+
         var ret = '';
         $('.login').html(
           '<li class="nav button" id="signout">Log out '+ data.email +'</li>'
@@ -53,7 +59,7 @@ $(document).ready(function(){
           $('#txt').val(data.content);
           console.log(data.id);
           $('#userPage').html($('#txt').val());
-          // history.pushState( {}, '', '/hypertexts/' + data.id );
+          history.pushState( {}, '', '/hypertexts/' + data.id );
 
         });
 
@@ -116,7 +122,7 @@ $(document).ready(function(){
       var updatedText = sanitizeText( $('#txt').val() );
 
       $.ajax({
-        url: 'finderID',
+        url: '/finderID',
         method: 'PUT',
         dataType: 'json',
         data: {
@@ -125,7 +131,7 @@ $(document).ready(function(){
       }).done(function(data){
         console.log(data)
         $.ajax({
-          url: 'hypertexts/' + data.id,
+          url: '/hypertexts/' + data.id,
           method: 'PUT',
           dataType: 'json',
           data: {

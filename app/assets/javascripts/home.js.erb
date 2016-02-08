@@ -1,3 +1,11 @@
+  var checkIfLoggedIn = function () {
+    if (window.current_user) {
+      console.log("User logged in");
+    } else {
+      console.log("No user");
+    }
+  };
+
 var sanitizeText = function (text) {
   var re = new RegExp("<.*script.*>(.*<\s*\/\s*script\s*>)?", "g");
   var currentContent = $("#txt").val();
@@ -9,16 +17,6 @@ var sanitizeText = function (text) {
 };
 
 $(document).ready(function(){
-
-  // $('.button').on('click', function(){
-    
-  //   $.ajax('/hypertexts/3.json').done(function(data){
-  //     console.log(data);
-  //     $('#userPage').append($(data.content))
-  //   })
-
-  // });
-
 
   //This is the editable HTML text box.
   $('#staticLink').on('click', function(){
@@ -57,32 +55,55 @@ $(document).ready(function(){
   });
 
 
-  // Let's add some blinking to 'Hello World' at the begining.
-  $('#hello').append('<span id="less">></span>')
-  $('#hello').append('<span class="blink">.</span>')
-
-  var hello = "..Hello World!"
-  var split = hello.split("");
 
 
-  var runText = function(){
-    var writeMe = function(num){
+// Automated tutorial starts here:
+  // window.current_user = window.current_user || undefined;
+  var checkIfLoggedIn = function () {
+    if (window.current_user) {
+      console.log("User logged in");
+    } else {
+      console.log("No user");
 
-      setTimeout(function(){ 
-        // console.log(split, i)
-        $('.blink').append('<span>' + split[num] + '</span>')
-      }, 100 * num); 
+      // Let's add some blinking to 'Hello World' at the begining.
+      $('#hello').append('<span id="less">></span>')
+      $('#hello').append('<span class="blink">.</span>')
+
+      var hello = "..Hello World!"
+      var split = hello.split("");
+
+      var runText = function(){
+        var writeMe = function(num){
+
+          setTimeout(function(){ 
+            // console.log(split, i)
+            $('.blink').append('<span>' + split[num] + '</span>')
+          }, 100 * num); 
+        }
+
+        for (var i = 0; i < split.length; i++) {
+          writeMe(i)
+          
+        };
+      }
+
+      setTimeout(function(){
+        runText()
+      },2500)
+
+
+      //Tutorial Step 1:
+      //Arrow
+
+
+
+
     }
+  };
 
-    for (var i = 0; i < split.length; i++) {
-      writeMe(i)
-      
-    };
-  }
 
-  setTimeout(function(){
-    runText()
-  },2500)
+
+
 
   //Tutorial Step 1:
 
@@ -91,7 +112,7 @@ $(document).ready(function(){
 
 
 
-
+  checkIfLoggedIn();
 
 
 
@@ -113,3 +134,13 @@ $(document).ready(function(){
 
     //   // $('body').css(css)
     // })
+
+
+  // $('.button').on('click', function(){
+    
+  //   $.ajax('/hypertexts/3.json').done(function(data){
+  //     console.log(data);
+  //     $('#userPage').append($(data.content))
+  //   })
+
+  // });

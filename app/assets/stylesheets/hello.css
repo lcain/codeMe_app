@@ -6,10 +6,9 @@
       display: block;
     }
 
-.hidden {
+body .hidden {
   display: none;
 }
-
 
 @-webkit-keyframes blinker {  
   from { opacity: 1.0; }
