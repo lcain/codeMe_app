@@ -9,6 +9,7 @@
   font-size: 12px;
   box-sizing: border-box;
   padding: 0;
+  background-color: rgba(121, 121, 121, 0.5);
 }
 
 .innerLogin1 {
@@ -43,6 +44,7 @@
   z-index: 100;
   padding: 5px;
   font-family: "Lucida Console", Monaco, monospace;
+  background-color: rgba(121, 121, 121, 0.5);
 
 }
 
@@ -60,8 +62,9 @@
   z-index: 2;
   color: white;
   text-align: right;
-  margin-right: 6px;
+  padding-right: 6px;
   font-family: "Lucida Console", Monaco, monospace;
+  background-color: rgba(121, 121, 121, 0.5);
   
 }
 
@@ -160,11 +163,10 @@ input {
 
 }
 
-#signin:hover {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 5px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 5px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover {
+  cursor: pointer; 
+  cursor: hand;
+  text-shadow: -1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -1px black;
 }
 
 
