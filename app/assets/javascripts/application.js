@@ -12,5 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require CSS-JSON
 //= require_tree .
