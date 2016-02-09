@@ -6,6 +6,31 @@
   display: inline-block;
   top: 0;
   font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  width: 17vw;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.innerLogin1 {
+  display: block;
+  width: 100%;
+  left: 0;
+  top: 0;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+#password, #email{
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.innerLogin2{
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
 
 .save {
@@ -52,8 +77,8 @@
 }
 
 .dropped {
-  width: 50%;
-  margin-left: 49.5%;
+  width: 40%;
+  margin-left: 59.7%;
   top:0;
   bottom:0;
   left:0;
@@ -95,7 +120,7 @@ body {
   width: 99%;
   height: 96.5%;
   resize: none;
-  background-color: rgba(255, 255, 255, .5);
+  background-color: rgba(255, 255, 255, .9);
   font-family: "Lucida Console", Monaco, monospace;
 
 }
@@ -136,8 +161,11 @@ input {
 
 }
 
-#signin {
-  border-right: 2px solid white;
+#signin:hover {
+  border-color: #66afe9;
+  outline: 0;
+  -webkit-box-shadow: inset 5px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 5px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 
 
