@@ -7,7 +7,6 @@
   top: 0;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 12px;
-  width: 17vw;
   box-sizing: border-box;
   padding: 0;
 }
@@ -22,7 +21,7 @@
 }
 
 #password, #email{
-  width: 90%;
+  width: 100px;
   box-sizing: border-box;
 }
 

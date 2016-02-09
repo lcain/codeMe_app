@@ -58,6 +58,7 @@ $(document).ready(function(){
         }).done(function(data){
           $('#txt').val(data.content);
           console.log(data.id);
+          console.log(data);
           $('#userPage').html($('#txt').val());
           history.pushState( {}, '', '/hypertexts/' + data.id );
 
@@ -102,8 +103,27 @@ $(document).ready(function(){
         currentUserID = data.id;
         var ret = '';
         $('.login').html(
-          '<li class="nav button" id="signout">Log out '+ data.email +'</li>'
-        );
+          '<li class="nav button" id="signout">Log out '+ data.email +'</li>');
+        console.log(data)
+
+       //  window.current_user = data2;
+       //  currentUserID = data2.id;
+       // $.ajax({
+       //    url: 'finderID',
+       //    method: 'PUT',
+       //    dataType: 'json',
+       //    data: {
+       //      individual: data2.id
+       //    }
+       //  }).done(function(data2){
+       //    $('#txt').val(data2.content);
+       //    console.log(data2.id);
+       //    console.log(data2);
+       //    $('#userPage').html($('#txt').val());
+       //    history.pushState( {}, '', '/hypertexts/' + data2.id );
+
+       //  });
+
 
         $('.button').on('click', function(e){
           // console.log('clicked')
