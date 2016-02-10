@@ -1,11 +1,12 @@
 //Menu for Tutorial
 var menuArray = [
 
-    {stepone: "<h3><h1>title<h3>words go here"},
+    {stepone: "<h3>title<h3> <p>words go here!</p>"},
     {steptwo: "2nd stuff"},
     {stepthree: "third stuff"}
 
   ]
+
 
 var tutorialStep = 0
 
@@ -14,17 +15,26 @@ var setButtons = function(){
   //Tutorial steps
   //Step one
   $('.tutorialText li.one').on('click', function(){
-      $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>');
+      $('.tutorialText').empty();
+      $('.tutorialText').append('<h1>Instructions go here:</h1>');
+      $('.tutorialText').append('<div class="othershit"></div>')
+      $('.othershit').text(menuArray[0].stepone)
       tutorialStep = 1
   })
   // Step two
   $('.tutorialText li.two').on('click', function(){
-      $('.tutorialText').html('<p>'+menuArray[1].steptwo+'<p>');
+      $('.tutorialText').empty();
+      $('.tutorialText').append('<h1>Instructions go here:</h1>');
+      $('.tutorialText').append('<div class="othershit"></div>')
+      $('.othershit').text(menuArray[1].steptwo)
       tutorialStep = 2
   })
   // Step three
   $('.tutorialText li.three').on('click', function(){
-      $('.tutorialText').html('<p>'+menuArray[2].stepthree+'<p>');
+      $('.tutorialText').empty();
+      $('.tutorialText').append('<h1>Instructions go here:</h1>');
+      $('.tutorialText').append('<div class="othershit"></div>')
+      $('.othershit').text(menuArray[2].stepthree)
       tutorialStep = 3
   })
 } 
@@ -138,7 +148,7 @@ $(document).ready(function(){
 
            // Always push your text to here.
         } else if (tutorialStep === 1){
-          $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>');
+          $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>')
 
         } else if (tutorialStep === 2){
           $('.tutorialText').html('<p>'+menuArray[1].steptwo+'<p>');
