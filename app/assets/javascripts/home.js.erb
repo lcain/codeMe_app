@@ -1,11 +1,45 @@
-  var checkIfLoggedIn = function () {
-    if (window.current_user) {
-      console.log("User logged in");
-    } else {
-      console.log("No user");
-    }
-  };
+//Menu for Tutorial
+var menuArray = [
 
+    {stepone: "<h3><h1>title<h3>words go here"},
+    {steptwo: "2nd stuff"},
+    {stepthree: "third stuff"}
+
+  ]
+
+var tutorialStep = 0
+
+// Reset buttons
+var setButtons = function(){
+  //Tutorial steps
+  //Step one
+  $('.tutorialText li.one').on('click', function(){
+      $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>');
+      tutorialStep = 1
+  })
+  // Step two
+  $('.tutorialText li.two').on('click', function(){
+      $('.tutorialText').html('<p>'+menuArray[1].steptwo+'<p>');
+      tutorialStep = 2
+  })
+  // Step three
+  $('.tutorialText li.three').on('click', function(){
+      $('.tutorialText').html('<p>'+menuArray[2].stepthree+'<p>');
+      tutorialStep = 3
+  })
+} 
+
+
+// Check if a user is logged in.
+var checkIfLoggedIn = function () {
+  if (window.current_user) {
+    console.log("User logged in");
+  } else {
+    console.log("No user");
+  }
+};
+
+// XSS to prevent Script tags
 var sanitizeText = function (text) {
   var re = new RegExp("<.*script.*>(.*<\s*\/\s*script\s*>)?", "g");
   var currentContent = $("#txt").val();
@@ -79,13 +113,76 @@ $(document).ready(function(){
 
   homePage();
 
-  tutorial();
 
+
+  //Tutorial starts here:
+  var tutorial = function(){
+
+
+    //This is the tutorial button
+    $('#tutorialBTN').on('click', function(){
+        
+        $('#tutorialBox').toggleClass( "tutDropped" )
+        $('#tutorialBox').toggleClass( "menu" )
+
+        $('.menu').toggleClass( "inv" );
+
+        $('#tutorialBTN').toggleClass( "borderRight" )
+
+        if ($('#tutorialBox').hasClass( "tutDropped" ) && tutorialStep === 0) {
+
+          // $('.tutDropped').append('<p>Hi</p>').show();
+          $('.tutorialText').html('<li class="one"><a>Click me</a></li><li class="two"><a>Click me2</a></li><li class="three"><a>Click me3</a></li>').show();
+
+          setButtons();
+
+           // Always push your text to here.
+        } else if (tutorialStep === 1){
+          $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>');
+
+        } else if (tutorialStep === 2){
+          $('.tutorialText').html('<p>'+menuArray[1].steptwo+'<p>');
+
+        } else if (tutorialStep === 3){
+          $('.tutorialText').html('<p>'+menuArray[2].stepthree+'<p>');
+
+        }
+
+
+
+ // Menu button
+      $('#menu').on('click', function(){
+        tutorialStep = 0;
+
+        if ($('#tutorialBox').hasClass( "tutDropped" ) && tutorialStep === 0) {
+
+            $('.tutorialText').html('<li class="one"><a>Click me</a></li><li class="two"><a>Click me2</a></li><li class="three"><a>Click me3</a></li>').show();
+          }
+          setButtons();
+      });
+
+
+    //End of #tutorialBTN on click
+    });
+
+
+    //End of Tutorial function
+  }
+
+
+  tutorial();
 
 
 // End of Document Ready
 });
 
+
+
+     // <bigdiv>
+    //     <stepone>
+    //     <steptwo>
+    //     <stepthree>
+    // </bigdiv>
 
 
 

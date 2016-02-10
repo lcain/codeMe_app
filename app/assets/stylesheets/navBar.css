@@ -163,10 +163,8 @@ input {
 
 }
 
-#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover, #tutorialBTN:hover {
+#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover, #tutorialBTN:hover, #menu:hover{
   color: #66afe9;
   cursor: pointer; 
   cursor: hand;
 }
-
-

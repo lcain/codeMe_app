@@ -1,7 +1,7 @@
 #tutorialBTN {
   position: fixed;
   bottom: 0;
-  left: 0;
+  left: 3;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 12px;
   padding: 2px;
@@ -12,6 +12,10 @@
 
 .borderRight {
   border-right: 2px solid white;
+}
+
+#tutDown {
+  position: relative;
 }
 
 #tutorialBox{
@@ -26,7 +30,7 @@
 }
 
 .tutNotDropped {
-  width: 60px;
+  width: 62px;
   height: 18px;
   background-color: rgba(121, 121, 121, 0.5);
 }
@@ -36,4 +40,41 @@
   height: 60%;
   left: 0;
   bottom: 0;
+}
+
+#tutorialBox * {
+  display: none;
+}
+
+#tutorialBox.tutDropped * {
+  display: block;
+}
+
+#tutorialBox #tutorialBTN {
+  display: block;
+}
+
+#menu {
+  z-index: 10;
+  width: 45px;
+  height: 18px;
+  /*margin-top: 20px;*/
+  margin-left: 62px;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  text-align: center;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  color: white;
+  padding-top: 2px;
+  position: fixed;
+  bottom: 0;
+
+}
+
+.tutorialText{
+  /*background-color: rgba(121, 121, 121, 0.5);*/
+  height: 100%;
+  width: 100%;
+  text-align: center;
 }
