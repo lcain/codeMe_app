@@ -1,0 +1,68 @@
+var intro = function(){
+ // Let's add some blinking to 'Hello World' at the begining.
+  $('#hello').append('<span id="less">></span>')
+  $('#hello').append('<span class="blink">.</span>')
+
+  var hello = "..Hello World!"
+  var split = hello.split("");
+
+  var runText = function(){
+    var writeMe = function(num){
+
+      setTimeout(function(){ 
+        // console.log(split, i)
+        $('.blink').append('<span>' + split[num] + '</span>')
+      }, 100 * num); 
+    }
+
+    for (var i = 0; i < split.length; i++) {
+      writeMe(i)
+      
+    };
+  }
+
+  setTimeout(function(){
+    runText()
+  },2500)
+
+  setTimeout(function(){
+    downArrow();
+    rightArrow();
+  }, 4000)
+
+  setTimeout(function(){
+    downArrowRemove();
+    rightArrowRemove();
+  }, 7100)
+ 
+//End of intro function.
+}
+  //Arrows
+  var downArrow = function () {
+    $('#tutDown').append( '<i class="downArrow fa fa-arrow-down fa-3x bounce"></i> ')
+  }
+
+   var downArrowRemove = function () {
+    $('.downArrow').removeClass('downArrow fa fa-arrow-down fa-3x bounce')
+  }
+
+  var rightArrow = function () {
+     $('#rightHyper').append( '<i class="rightArrow fa fa-arrow-right fa-3x bounce2"></i> ')
+  }
+
+  var rightArrowRemove = function () {
+    $('.rightArrow').removeClass('rightArrow fa fa-arrow-right fa-3x bounce2')
+  }
+
+
+
+  //Testing
+  // var what = function () {
+  //   $('#what').textillate();
+  // }
+  
+
+
+   //Tutorial Step 1:
+
+

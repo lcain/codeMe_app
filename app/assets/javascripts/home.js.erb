@@ -27,11 +27,13 @@ $(document).ready(function(){
 
   });
 
+  //This is the editable HTML text box.
+  // This renders the page on keyup.
   $('#txt').keyup(function(){
 
     $('#userPage').html(   sanitizeText($(this).val())    );
 
-  })//.trigger("keyup"); //This makes what's in the editable HTML text box render on the page automatically
+  })//.trigger("keyup"); //This makes what's in the editable HTML text box render on the page automatically on page load.
 
   // This is to allow tabbing in the text box.
   $(document).delegate('#txt', 'keydown', function(e) {
@@ -55,22 +57,20 @@ $(document).ready(function(){
   });
 
 
-
-
-  // Automated tutorial starts here:
-  // Check to see if the user is logged in. If logged in, no tutorial, if not logged in start the tutorial.
+  // Automated intro starts here:
+  // Check to see if the user is logged in. If logged in, no intro, if not logged in start the intro.
   var checkIfLoggedIn = function () {
     if (window.current_user) {
       // console.log("User logged in");
     } else {
       // console.log("No user");
 
-      tutorial();
+      intro();
     }
   };
 
   // Check to see if the user is on the homepage.
-  // Only start tutorial if the user is on the homepage.
+  // Only start intro if the user is on the homepage.
   var homePage = function(){
     if(location.pathname === '/'){
       checkIfLoggedIn();
@@ -78,6 +78,9 @@ $(document).ready(function(){
   };
 
   homePage();
+
+  tutorial();
+
 
 
 // End of Document Ready

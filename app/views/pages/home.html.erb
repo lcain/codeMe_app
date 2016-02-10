@@ -1,18 +1,21 @@
 
-<div id="hypertextDropdown" class="notDropped">
-  
-  <div id="staticLink">
-    HTML
+
+<div id="rightHyper">
+  <div id="hypertextDropdown" class="notDropped">
+    
+    <div id="staticLink">
+      HTML
+    </div>
+   
+
+    <textarea id="txt" class="inv">
+      <% if current_user %>
+        <%=  "#{current_user.hypertexts[0].content}" %>
+      <% else %>
+      <% end %>
+    </textarea>
+
   </div>
- 
-
-  <textarea id="txt" class="inv">
-    <% if current_user %>
-      <%=  "#{current_user.hypertexts[0].content}" %>
-    <% else %>
-    <% end %>
-  </textarea>
-
 </div>
 
 <div class="button nav save <%= !current_user ? 'hidden' : '' %>" id="savesies">SAVE!</div>
@@ -31,4 +34,14 @@
 <div class="style"></div>
 
 <div id="HIDE"><% if current_user %><%= "#{current_user.id}" %><% end %></div>
-<div id="arrows"></div>
+
+
+
+<div id="tutDown">
+  <div id="tutorialBox" class="tutNotDropped">
+    <div id="tutorialBTN">
+      Tutorial
+    </div>
+  </div>
+</div>
+

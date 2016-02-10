@@ -163,10 +163,10 @@ input {
 
 }
 
-#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover {
+#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover, #tutorialBTN:hover {
+  color: #66afe9;
   cursor: pointer; 
   cursor: hand;
-  text-shadow: -1px 0 black, 0 0.1px black, 0.1px 0 black, 0 -1px black;
 }
 
 
