@@ -86,7 +86,7 @@ a{
   font-family: "Lucida Console", Monaco, monospace;
 }
 
-.codeblock, .codeblock1, .codeblock2, .codeblock3, .codeblock4, .codeblock5, .codeblock6, .codeblock7{
+.codeblock {
   width: 50%;
   margin-left: 25%;
   text-align: left;
