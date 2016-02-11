@@ -176,28 +176,19 @@ $(document).ready(function(){
     } else if (e.currentTarget.id === "savesies") {
       var updatedText = sanitizeText( $('#txt').val() );
 
+      var url = window.location.pathname
       $.ajax({
-        url: '/finderID',
+        url: url,
         method: 'PUT',
         dataType: 'json',
         data: {
-          individual: currentUserID
-        }
-      }).done(function(data){
-        console.log(data)
-        $.ajax({
-          url: '/hypertexts/' + data.id,
-          method: 'PUT',
-          dataType: 'json',
-          data: {
-            hypertext: {
-              content: updatedText,
-              id: data.id
-            }
+          hypertext: {
+            content: updatedText,
+            id: url.split('/')[2]
           }
-        }).done(function() {
-          console.log('success!!!!!!!!!!');
-        });
+        }
+      }).done(function() {
+        console.log('success!!!!!!!!!!');
       });
     }
   
