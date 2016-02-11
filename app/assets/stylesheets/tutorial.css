@@ -36,7 +36,7 @@
 }
 
 .tutDropped {
-  width: 50%;
+  width: 40%;
   height: 60%;
   left: 0;
   bottom: 0;
@@ -73,8 +73,30 @@
 }
 
 .tutorialText{
-  /*background-color: rgba(121, 121, 121, 0.5);*/
   height: 100%;
   width: 100%;
   text-align: center;
+  overflow: auto;
+  color: black;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+a{
+  color: white;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.codeblock, .codeblock1, .codeblock2, .codeblock3, .codeblock4, .codeblock5, .codeblock6, .codeblock7{
+  width: 50%;
+  margin-left: 25%;
+  text-align: left;
+  background-color: grey;
+}
+
+.textCode{
+  font-weight: strong;
+  width: 50%;
+  margin-left: 25%;
+  text-align: left;
+
 }

@@ -17,6 +17,34 @@ $(document).ready(function(){
         document.location.href="/"
       })
 
+    } else if (e.currentTarget.id === "hyperLinks"){
+      var hyperLists = $('#hyperLists')
+      if ( hyperLists.hasClass('hidden') ){
+          hyperLists.removeClass('hidden')
+
+          $.ajax({
+              url: '/finderID',
+              method: 'PUT',
+              dataType: 'json',
+              data: {
+                individual: currentUserID
+              }
+            }).done(function(data){
+              // console.log(data)
+              var i = 1
+              data.forEach(function(e){
+                // console.log(e)
+                hyperLists.append('<a class="button bav" id="' + e.id + '" href="/hypertexts/'+e.id +'">' + i + '</a>');
+                i++
+              });
+            });
+
+
+        } else {
+          hyperLists.addClass('hidden')
+          hyperLists.empty();
+        };
+
     } else if (e.currentTarget.id === "signin"){
       var email = $('#email').val();
       var password = $('#password').val();
@@ -40,7 +68,9 @@ $(document).ready(function(){
       $.ajax(req).done(function(data){
         window.current_user = data;
         currentUserID = data.id;
-
+        var hy = $('#hyperLinks');
+        hy.text('V');
+        hy.removeClass('hidden');
         $(".save").removeClass("hidden");
 
         var ret = '';
@@ -101,6 +131,9 @@ $(document).ready(function(){
       }
       $.ajax(req).done(function(data){
         $('#savesies').removeClass("hidden");
+        var hy = $('#hyperLinks');
+        hy.text('V');
+        hy.removeClass('hidden');
 
         currentUserID = data.id;
         var ret = '';
@@ -122,7 +155,7 @@ $(document).ready(function(){
           console.log(data2.id);
           console.log(data2);
           $('#userPage').html($('#txt').val());
-          history.pushState( {}, '', '/hypertexts/' + data2.id );
+          history.pushState( {}, '', '/hypertexts/' + data2[0].id );
 
         });
 

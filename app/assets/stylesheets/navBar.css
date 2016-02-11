@@ -122,7 +122,7 @@ body {
   width: 99%;
   height: 96.5%;
   resize: none;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: rgba(255, 255, 255, .8);
   font-family: "Lucida Console", Monaco, monospace;
 
 }
@@ -144,6 +144,7 @@ a:link {
   display: inline-block;
   padding-left: 5px;
   padding-right: 5px;
+  text-align: center;
 }
 
 .bottom {
@@ -163,8 +164,50 @@ input {
 
 }
 
-#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover, #tutorialBTN:hover, #menu:hover{
+#signin:hover, #signup:hover, .save:hover, #staticLink:hover, #signout:hover, #tutorialBTN:hover, #menu:hover, a:hover, #hyperLinks:hover{
   color: #66afe9;
   cursor: pointer; 
   cursor: hand;
+}
+
+
+#hyperLinks{
+  position: fixed;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  top: 0;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: rgba(121, 121, 121, 0.5);
+  right: 55px;
+  line-height: 21px;
+  font-size: 16px;
+  width: 18px;
+
+}
+
+#hyperLists{
+  position: fixed;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  top: 25;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 12px;
+  box-sizing: border-box;
+  padding: 0;
+  background-color: rgba(121, 121, 121, 0.5);
+  right: 55px;
+  line-height: 21px;
+  font-size: 16px;
+  width: 18px;
+
+}
+
+.bav {
+  display: inline-block;
+  text-align: center;
 }

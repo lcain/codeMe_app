@@ -3,8 +3,18 @@
 
 <div id="hypertextDropdown" class="notDropped">
   
+  <% if current_user %>
+    <div id="hyperLinks" class="nav button">V</div>
+  <% else %>
+    <div id="hyperLinks" class="nav button hidden">V</div>
+  <% end %>
+
   <div id="staticLink">
     HTML
+  </div>
+
+  <div id="hyperLists" class="button nav hidden">
+    
   </div>
  
   <% if @hypertext.user == current_user %>
@@ -40,3 +50,14 @@
 
 <div id="HIDE"><% if current_user %><%= "#{current_user.id}" %><% end %></div>
 <div id="arrows"></div>
+
+<div id="tutDown">
+  <div id="tutorialBox" class="tutNotDropped">
+      <div id="menu">Menu</div>
+
+    <div class="tutorialText"></div>
+    <div id="tutorialBTN">
+      Tutorial
+    </div>
+  </div>
+</div>

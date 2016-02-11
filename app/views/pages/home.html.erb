@@ -2,9 +2,20 @@
 
 <div id="rightHyper">
   <div id="hypertextDropdown" class="notDropped">
-    
+
+    <% if current_user %>
+      <div id="hyperLinks" class="nav button">V</div>
+    <% else %>
+      <div id="hyperLinks" class="nav button hidden">V</div>
+    <% end %>
+  
+
     <div id="staticLink">
       HTML
+    </div>
+
+    <div id="hyperLists" class="button nav hidden">
+      
     </div>
    
 

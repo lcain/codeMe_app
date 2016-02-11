@@ -9,8 +9,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
     user.password_confirmation = params[:user][:password_confirmation]
     user.save!
 
-    hypertext = Hypertext.create :content => params[:user][:hypertext]
-    user.hypertexts << hypertext
+    
+    (1..5).each do |i|
+      hypertext = Hypertext.create :content => params[:user][:hypertext]
+      user.hypertexts << hypertext
+    end
+
+    
 
 
 

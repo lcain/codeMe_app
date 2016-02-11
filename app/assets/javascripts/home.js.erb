@@ -1,11 +1,20 @@
 //Menu for Tutorial
 var menuArray = [
 
-    {stepone: "<h3>title<h3> <p>words go here!</p>"},
-    {steptwo: "2nd stuff"},
-    {stepthree: "third stuff"}
+    {stepone: ["<body> </body>", "<p> </p>", "<h1> </h1>", "<a> </a>", "<img> </img>", "<li> </li>", "<div> </div>", "<br>"]},
+    {steptwo: "<style> </style>"},
+    {stepthree: ["<style> </style>", "<body> </body>", '<style>', 'body{', ' background-color: rgb(0, 2, 25)','}', '</style>']},
+    {stepfour: "<style>CodeGOESHERE. </style>"},
 
-  ]
+]
+
+var instructions = [
+  {stepone: '<h3 style="margin-top:10px; margin-bottom: 0;">Let\'s go over the basics!</h3> <span>Here we have opening tags and closing tags. Closing tags have a backslash.</span>'},
+  {steptwo: '<h3>This is a style tag.</h3>'},
+  {stepthree: '<h3>Let\'s build a basic website!</h3><span>We will start by making our body tag. Everything we do will be wrapped by the body tag. </span>'},
+  {stepfour: '<h3>Let\'s add div\'s!</h3>'}
+]
+
 
 
 var tutorialStep = 0
@@ -13,30 +22,79 @@ var tutorialStep = 0
 // Reset buttons
 var setButtons = function(){
   //Tutorial steps
-  //Step one
+  //The Basics
   $('.tutorialText li.one').on('click', function(){
       $('.tutorialText').empty();
-      $('.tutorialText').append('<h1>Instructions go here:</h1>');
-      $('.tutorialText').append('<div class="othershit"></div>')
-      $('.othershit').text(menuArray[0].stepone)
-      tutorialStep = 1
+      $('.tutorialText').append(instructions[0].stepone);
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a body tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a paragraph tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock1"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a header tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock2"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a link tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock3"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is an image tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock4"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a list tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock5"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a division tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock6"></div>');
+      $('.tutorialText').append('<br><div class="textCode"><strong>This is a line break, you don\'t need a closing tag.</strong></div>');
+      $('.tutorialText').append('<div class="codeblock7"></div><br><br>');
+      $('.codeblock').text(menuArray[0].stepone[0]);
+      $('.codeblock1').text(menuArray[0].stepone[1]);
+      $('.codeblock2').text(menuArray[0].stepone[2]);
+      $('.codeblock3').text(menuArray[0].stepone[3]);
+      $('.codeblock4').text(menuArray[0].stepone[4]);
+      $('.codeblock5').text(menuArray[0].stepone[5]);
+      $('.codeblock6').text(menuArray[0].stepone[6]);
+      $('.codeblock7').text(menuArray[0].stepone[7]);
+      tutorialStep = 1;
   })
-  // Step two
+  // Styling
   $('.tutorialText li.two').on('click', function(){
       $('.tutorialText').empty();
-      $('.tutorialText').append('<h1>Instructions go here:</h1>');
-      $('.tutorialText').append('<div class="othershit"></div>')
-      $('.othershit').text(menuArray[1].steptwo)
+      $('.tutorialText').append(instructions[1].steptwo);
+      $('.tutorialText').append('<div class="codeblock"></div>')
+      $('.tutorialText').append('<div class="textCode"><br>We will be putting all of our styling requirements inside of this tag.</div>');
+      $('.codeblock').text(menuArray[1].steptwo)
       tutorialStep = 2
   })
-  // Step three
+  // Step One
   $('.tutorialText li.three').on('click', function(){
       $('.tutorialText').empty();
-      $('.tutorialText').append('<h1>Instructions go here:</h1>');
-      $('.tutorialText').append('<div class="othershit"></div>')
-      $('.othershit').text(menuArray[2].stepthree)
+      $('.tutorialText').append(instructions[2].stepthree);
+      $('.tutorialText').append('<div class="codeblock"></div>')
+      $('.tutorialText').append('<div class="codeblock2"></div>')
+      $('.codeblock').text(menuArray[2].stepthree[0])
+      $('.codeblock2').text(menuArray[2].stepthree[1])
+      $('.tutorialText').append('<br><span>Let\'s also style our background while we are here.</span>');
+      $('.tutorialText').append('<div class="codeblock3"></div>')
+      $('.tutorialText').append('<div class="codeblock4"></div>')
+      $('.tutorialText').append('<div class="codeblock5"></div>')
+      $('.tutorialText').append('<div class="codeblock6"></div>')
+      $('.tutorialText').append('<div class="codeblock7"></div>')
+      $('.codeblock3').text(menuArray[2].stepthree[2])
+      $('.codeblock4').text(menuArray[2].stepthree[3])
+      $('.codeblock5').text(menuArray[2].stepthree[4])
+      $('.codeblock6').text(menuArray[2].stepthree[5])
+      $('.codeblock7').text(menuArray[2].stepthree[6])
+
       tutorialStep = 3
   })
+
+    //Step two
+   $('.tutorialText li.four').on('click', function(){
+      $('.tutorialText').empty();
+      $('.tutorialText').append(instructions[1].steptwo);
+      $('.tutorialText').append('<div class="codeblock"></div>')
+      $('.tutorialText').append('<div class="textCode"><br>We will be putting all of our styling requirements inside of this tag.</div>');
+      $('.codeblock').text(menuArray[1].steptwo)
+      tutorialStep = 4
+  })
+
+ //End of reset buttons function 
 } 
 
 
@@ -142,23 +200,88 @@ $(document).ready(function(){
         if ($('#tutorialBox').hasClass( "tutDropped" ) && tutorialStep === 0) {
 
           // $('.tutDropped').append('<p>Hi</p>').show();
-          $('.tutorialText').html('<li class="one"><a>Click me</a></li><li class="two"><a>Click me2</a></li><li class="three"><a>Click me3</a></li>').show();
+          $('.tutorialText').html('<li class="one"><a>The Basic Tags</a></li><li class="two"><a>Styling</a></li><li class="three"><a>Build A Site! Step One:</a></li><li class="four"><a>Step Two:</a></li>').show();
 
           setButtons();
 
            // Always push your text to here.
         } else if (tutorialStep === 1){
-          $('.tutorialText').html('<p>'+menuArray[0].stepone+'<p>')
+            $('.tutorialText').empty();
+            $('.tutorialText').append(instructions[0].stepone);
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a body tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a paragraph tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock1"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a header tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock2"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a link tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock3"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is an image tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock4"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a list tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock5"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a division tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock6"></div>');
+            $('.tutorialText').append('<br><div class="textCode"><strong>This is a line break, you don\'t need a closing tag.</strong></div>');
+            $('.tutorialText').append('<div class="codeblock7"></div><br><br>');
+           
+            $('.codeblock').text(menuArray[0].stepone[0]);
+            $('.codeblock1').text(menuArray[0].stepone[1]);
+            $('.codeblock2').text(menuArray[0].stepone[2]);
+            $('.codeblock3').text(menuArray[0].stepone[3]);
+            $('.codeblock4').text(menuArray[0].stepone[4]);
+            $('.codeblock5').text(menuArray[0].stepone[5]);
+            $('.codeblock6').text(menuArray[0].stepone[6]);
+            $('.codeblock7').text(menuArray[0].stepone[7]);
+            tutorialStep = 1;
+
+
+
+          // (menuArray[0].stepone[0] + '<br>' + menuArray[0].stepone[1] + '<br>' + menuArray[0].stepone[2] + '<br>' + menuArray[0].stepone[3])
+
+
+          tutorialStep = 1
 
         } else if (tutorialStep === 2){
-          $('.tutorialText').html('<p>'+menuArray[1].steptwo+'<p>');
+          $('.tutorialText').empty();
+          $('.tutorialText').append(instructions[1].steptwo);
+          $('.tutorialText').append('<div class="codeblock"></div>')
+          $('.tutorialText').append('<div class="textCode"><br>We will be putting all of our styling requirements inside of this tag.</div>');
+          $('.codeblock').text(menuArray[1].steptwo)
+          tutorialStep = 2
 
         } else if (tutorialStep === 3){
-          $('.tutorialText').html('<p>'+menuArray[2].stepthree+'<p>');
+          $('.tutorialText').empty();
+          $('.tutorialText').append(instructions[2].stepthree);
+          $('.tutorialText').append('<div class="codeblock"></div>')
+          $('.tutorialText').append('<div class="codeblock2"></div>')
+          $('.codeblock').text(menuArray[2].stepthree[0])
+          $('.codeblock2').text(menuArray[2].stepthree[1])
+          $('.tutorialText').append('<br><span>Let\'s also give our body a background colour while we are here.</span>');
+          $('.tutorialText').append('<div class="codeblock3"></div>')
+          $('.tutorialText').append('<div class="codeblock4"></div>')
+          $('.tutorialText').append('<div class="codeblock5"></div>')
+          $('.tutorialText').append('<div class="codeblock6"></div>')
+          $('.tutorialText').append('<div class="codeblock7"></div>')
+          $('.codeblock3').text(menuArray[2].stepthree[2])
+          $('.codeblock4').text(menuArray[2].stepthree[3])
+          $('.codeblock5').text(menuArray[2].stepthree[4])
+          $('.codeblock6').text(menuArray[2].stepthree[5])
+          $('.codeblock7').text(menuArray[2].stepthree[6])
 
-        }
+          tutorialStep = 3
 
-
+        } else if (tutorialStep === 4){
+          //Step two
+           $('.tutorialText li.four').on('click', function(){
+              $('.tutorialText').empty();
+              $('.tutorialText').append(instructions[1].steptwo);
+              $('.tutorialText').append('<div class="codeblock"></div>')
+              $('.tutorialText').append('<div class="textCode"><br>We will be putting all of our styling requirements inside of this tag.</div>');
+              $('.codeblock').text(menuArray[1].steptwo)
+              tutorialStep = 4
+            })
+          }
 
  // Menu button
       $('#menu').on('click', function(){
@@ -166,7 +289,7 @@ $(document).ready(function(){
 
         if ($('#tutorialBox').hasClass( "tutDropped" ) && tutorialStep === 0) {
 
-            $('.tutorialText').html('<li class="one"><a>Click me</a></li><li class="two"><a>Click me2</a></li><li class="three"><a>Click me3</a></li>').show();
+            $('.tutorialText').html('<li class="one"><a>The Basic Tags</a></li><li class="two"><a>Styling</a></li><li class="three"><a>Build A Site! Step One:</a></li><li class="four"><a>Step Two:</a></li>').show();
           }
           setButtons();
       });
@@ -187,34 +310,3 @@ $(document).ready(function(){
 });
 
 
-
-     // <bigdiv>
-    //     <stepone>
-    //     <steptwo>
-    //     <stepthree>
-    // </bigdiv>
-
-
-
-    // $.ajax('/styles/3.json').done(function(data){
-    //   console.log(data);
-
-    //   var json = CSSJSON.toJSON(data.content);
-    //   var css = CSSJSON.toCSS(json);
-
-    //   // console.log(css)
-    //   $('.style').append('<style>' + css + '</style>')
-    //   $('.style').append( css )
-
-    //   // $('body').css(css)
-    // })
-
-
-  // $('.button').on('click', function(){
-    
-  //   $.ajax('/hypertexts/3.json').done(function(data){
-  //     console.log(data);
-  //     $('#userPage').append($(data.content))
-  //   })
-
-  // });
