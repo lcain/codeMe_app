@@ -74,7 +74,8 @@
 
 .tutorialText{
   height: 100%;
-  width: 100%;
+  width: 90%;
+  margin-left: 5%;
   text-align: center;
   overflow: auto;
   color: black;

@@ -30,8 +30,15 @@ $(document).ready(function(){
                 individual: currentUserID
               }
             }).done(function(data){
-              // console.log(data)
+              console.log(data)
               var i = 1
+
+  
+              data.sort(function(a, b){
+                return a.id - b.id;
+              });
+              
+
               data.forEach(function(e){
                 // console.log(e)
                 hyperLists.append('<a class="button bav" id="' + e.id + '" href="/hypertexts/'+e.id +'">' + i + '</a>');
